@@ -47,7 +47,7 @@ h3 {
 p {
   font-family: $oxygen;
   font-size: 18px;
-  color: rgb(123, 120, 120);
+  color: #7B7878;
 }
 
 a {
@@ -97,7 +97,7 @@ height: 100vh;
 
 // * About 
 #about {
-  padding: 50px 0;
+  padding-top: 50px;
   margin: 0px 100px;
 
   .aboutMain {
@@ -121,7 +121,7 @@ height: 100vh;
 // * Skills
 #skills {
   justify-content: flex-start;
-  padding: 50px 0;
+  padding-top: 50px;
   height: auto;
 }
 
@@ -284,7 +284,9 @@ height: 100vh;
   }
 
   .input {
-    color: black;
+    font-family: $oxygen;
+    font-size: 18px;
+    color: #7B7878;
     border: none;
     height: 45px;
     width: 100%;
@@ -310,7 +312,7 @@ height: 100vh;
     border: 1px solid black;
   }
   .button:hover {
-    background-color: #6C7441;
+    background-color: #E0E0D8;
   }
 }
 

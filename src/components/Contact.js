@@ -11,6 +11,11 @@ export default function Contact () {
     message: 'Message'
   })
 
+  function handleChange(event) {
+    const { name, value } = event.target
+    setFormValue({ ...formValue, [name]: value })
+  }
+
   function sendEmail(e) {
     e.preventDefault()
     emailjs.sendForm('contact_service', 'contact_form', e.target, 'user_8dwn1LIRFuIrRyqkEmRd8')
@@ -47,10 +52,10 @@ export default function Contact () {
 
       <div className={emailOpen ? 'contactForm' : 'closed'}>
         <form className="contact-form" onSubmit={sendEmail}>
-          <input className="input" type="text" name="from_name" placeholder={formValue.name} />
-          <input className="input" type="email" name="from_email" placeholder={formValue.email} />
-          <textarea className="input" name="message" placeholder={formValue.message} />
-          <input className="button" type="submit" value="Send" />
+          <input className="input" type="text" name="from_name" placeholder={formValue.name} onChange={handleChange} />
+          <input className="input" type="email" name="from_email" placeholder={formValue.email} onChange={handleChange} />
+          <textarea className="input" name="message" placeholder={formValue.message} onChange={handleChange} />
+          <input className="button" type="submit" value="Send" onChange={handleChange} />
         </form>
       </div>
     </section>
