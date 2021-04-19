@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-//import { BsLink45Deg } from 'react-icons/bs'
+import { BsLink45Deg } from 'react-icons/bs'
 
 import projectInfo from './ProjectInfo'
 
@@ -16,7 +16,6 @@ export default function Projects () {
       setPage(page - 1)
     }
   }
-  console.log(page)
 
   function handleRight() {
     if (page !== lastPage) {
@@ -25,14 +24,12 @@ export default function Projects () {
   }
 
 
-
   return <>
     <section id="projects">
       <div className="projectTitle">
         <h2>Projects</h2>
         
       </div>
-
       {projectInfo[page - 1].map((project, i) => {
         return <div key={i} id="projectMain">
           <div className="row">
@@ -55,15 +52,14 @@ export default function Projects () {
                   </div>
                 </div>
 
-
                 <p>{project.description}</p>
-                <p>Take a look: </p>
+                <p>Take a look:</p>
                 <a className="projectsIcon" href={project.github} target="_blank" rel="noreferrer">
                   <i className="devicon-github-original"></i>
                 </a>
-                {/* <a className="projectOther" href={project.link} target="_blank" >
+                <a className="projectOther" href={project.link} target="_blank" rel="noreferrer">
                   <BsLink45Deg className="projectOther" />
-                </a> */}
+                </a>
               </div>
               <div className="leftBottom">
                 <img src={project.middleBottom} />
@@ -71,20 +67,21 @@ export default function Projects () {
             </div>
 
             <div className="middle">
-              <div className="middleTop">
-                <img src={project.leftTop} />
-              </div>
-              <div className="Bottom">
+              {/* <div className="middleTop"> */}
+              <img src={project.projectImage} />
+              {/* </div> */}
+              {/* <div className="Bottom">
                 <img src={project.leftBottom} />
-              </div>
+              </div> */}
             </div>
 
-            <div className="right">
+            {/* <div className="right">
               <img src={project.right} />
-            </div>
+            </div> */}
           </div>
         </div>
       })}
+
       <div className="numbers">
         <p className="pages" onClick={handleLeft}>&lt;</p>
         <p className="pages" onClick={handlePage} id='1'>1</p>
@@ -94,6 +91,5 @@ export default function Projects () {
         <p className="pages" onClick={handleRight}>&gt;</p>
       </div>
     </section>
-
   </>
 }

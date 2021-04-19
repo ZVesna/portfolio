@@ -1,41 +1,8 @@
-h1 {
-  color: #AC526C;
-  //font-family: $pops;
-  font-weight: 100;
-  font-size: 75px;
-  margin: 0px;
-  margin-top: 370px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 
-h2 {
-  //font-family: $pops;
-  color: #793039;
-  font-weight: 100;
-  font-size: 50px;
-  margin: 0px;
-  margin-bottom: 30px;
-}
-
-
-h3 {
-  //font-family: $monts;
-  color: #793039;
-  font-weight: 100;
-  font-size: 25px;
-  margin: 0px;
-}
-
-h4 {
-  //font-family: $monts;
-}
-
-p {
-  //font-family: $monts;
-  font-size: 20px;
-}
+$oxygen: 'Oxygen', sans-serif;
 
 body, html {
-  //background-color: white;
   width: 100%;
   height: auto;
   display: flex;
@@ -52,6 +19,35 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+h1 {
+  color: #AC526C;
+  font-weight: 100;
+  font-size: 75px;
+  margin: 0px;
+  margin-top: 370px;
+}
+
+h2 {
+  color: #793039;
+  font-weight: 100;
+  font-size: 50px;
+  margin: 0px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: #793039;
+  font-weight: 100;
+  font-size: 25px;
+  margin: 0px;
+}
+
+p {
+  font-family: $oxygen;
+  font-size: 18px;
+  color: rgb(123, 120, 120);
 }
 
 a {
@@ -77,24 +73,16 @@ a {
     a, .anchor {
     padding: 10px;
     font-size: 20px;
-    //font-family: $monts;
     font-weight: 100;
     font-size: 25px;
     margin: 0px;
-    text-decoration: none;
-    color: #793039;
-  }
-  // a:hover {
-  //   border-top: 4px solid $blue;
-  // }
-
-  a:visited {
     color: #AC526C;
   }
   
   .hamburger-react {
     display: none;
   }
+  
   a:hover {
     border-top: 4px solid #AC526C;
   }
@@ -111,11 +99,6 @@ height: 100vh;
 #about {
   padding: 50px 0;
   margin: 0px 100px;
-/*   .aboutText {
-    width: 70%;
-    height: 100px;
-    padding: 10px;
-  } */
 
   .aboutMain {
     display: flex;
@@ -123,12 +106,12 @@ height: 100vh;
     align-items: center;
     justify-content: center; 
     width: 100%;
-    //margin-left: 30px;
-    //margin-right: 30px;
   }
+
   .aboutWord {
     padding: 0 50px;
   }
+  
   img {
     max-width: 300px;
     border-radius: 40%;
@@ -140,7 +123,6 @@ height: 100vh;
   justify-content: flex-start;
   padding: 50px 0;
   height: auto;
-  background-color: #DFDFD7;
 }
 
 #skills, #contact {
@@ -150,7 +132,7 @@ height: 100vh;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 50%;
 
     i, .other {
       color: #AC526C;
@@ -167,7 +149,7 @@ height: 100vh;
     .label {
       position: absolute;
       opacity: 0;
-      //font-family: 'Poiret One', cursive;
+      font-family: $oxygen;
       font-weight: 100;  
     } 
 
@@ -179,117 +161,112 @@ height: 100vh;
         opacity: 1;
       }
     }
-/*     .singleIcon:visited {
-      .label {
-        color: black;
-      }
-    } */
   }
 }
 
 // * Projects
-// ? pag. 
+// ? Pagination 
 #projects {
-  padding-top: 60px;
+  padding: 50px 0;
   margin: 0px 50px;
+
   .numbers {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
+
   .pages {
     padding: 0px 20px 0px 20px;
     font-weight: 20px;
     cursor: pointer;
   }
+  
   .pages:hover {
-    border-bottom: 3px solid #90A6D8;
+    border-bottom: 3px solid #AC526C;
   }
 
   // ? Projects layout
   #projectMain {
     justify-content: flex-start;
-    // margin: 30px;
 
     .row {
       display: flex;
-    flex-direction: row;
-    width: 100%;
-    border-radius: 5%;
-    background-color: #f7e4ea;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    align-items: center;
-  }
-
-  .left, .middle, .right {
-    height: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .left {
-    margin-left: 50px; 
-  }
-  .middle {
-    margin: 0px 20px 0px 20px;
-  }
-
-  .right {
-    margin-right: 50px; 
-  }
-
-  .leftTop {
-    flex-grow: 1;
-    margin-bottom: 10px;
-    .iconFlex {
-      display: flex;
       flex-direction: row;
+      width: 100%;
+      border-radius: 5%;
+      background-color: #E0E0D8;
+      padding: 30px 0;
+      align-items: center;
+    }
+
+    .left, .middle, .right {
+      height: 100%;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      .projectsIcon {
+      width: 100%;
+    }
+
+    .left {
+      margin-left: 50px; 
+    }
+    
+    .middle {
+      margin: 0px 20px 0px 20px;
+    }
+
+    .right {
+      margin-right: 50px; 
+    }
+
+    .leftTop {
+      flex-grow: 1;
+      margin-bottom: 10px;
+      .iconFlex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .projectsIcon {
+          font-size: 35px;
+          padding: 3px;
+        }
+        i {
+          color: #AC526C;
+        }
+      }
+      .projectOther, i {
+        color: #AC526C;
         font-size: 35px;
-        padding: 3px;
       }
-      i {
-        color: #476B75;
-      }
-    }
-    .projectOther, i {
-      color: #476B75;
-      font-size: 35px;
-    }
-  } 
+    } 
 
-  .leftBottom  {
-    flex-grow: 3;
-  }
+    .leftBottom  {
+      flex-grow: 3;
+    }
   
-  .middleBottom {
-    margin-top: 30px;
-  }
+    .middleBottom {
+      margin-top: 30px;
+    }
 
-  .middleTop {
-    margin-bottom: 30px;
+    .middleTop {
+      margin-bottom: 30px;
+    }
 
+    img {
+      width: 90%;
+      height: 100%;
+    }
   }
-  img {
-    border-radius: 5%;
-    width: 100%;
-    height: 100%;
-  }
-}
 }
 
 // * Contact
 #contact { 
   height: 60vh;
   justify-content: flex-start;
-  padding-top: 100px;
-  padding-bottom: 30px;
+  padding: 30px 0;
   height: 100%;
 }
 
@@ -298,28 +275,26 @@ height: 100vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid #476B75;
+  border: 1px solid #E0E0D8;
   padding: 20px;
   width: 400px;
 
   label {
-    //font-family: $monts;
-    font-size: 20px;
+    font-family: $oxygen;
   }
 
   .input {
-    background-color: #FDF7EC;
     color: black;
     border: none;
     height: 45px;
     width: 100%;
     margin: 10px 0px 10px 0px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #E0E0D8;
     padding-top: 12px;
   }
 
   .input::placeholder, .button {
-    //font-family: $monts;
+    font-family: $oxygen;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -341,11 +316,6 @@ height: 100vh;
 
 .closed {
   display: none;
-}
-
-small {
-  //font-family: $monts;
-  padding-bottom: 10px;
 }
 
 // ? MEDIA QUERIES

@@ -8,7 +8,7 @@ export default function Contact () {
   const [formValue, setFormValue] = useState({
     email: 'Email',
     name: 'Name',
-    message: 'I would love to speak to you about...'
+    message: 'Message'
   })
 
   function sendEmail(e) {
